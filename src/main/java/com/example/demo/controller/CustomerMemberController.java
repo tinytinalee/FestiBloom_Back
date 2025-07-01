@@ -11,7 +11,12 @@ public class CustomerMemberController {
 
     @Autowired
     private CustomerMemberService service;
-
+    
+    @PostMapping("/hello")
+    public void hello() {
+    	
+    }
+    
     @PostMapping("/join")
     public CustomerMember join(@RequestBody CustomerMember member) {
         return service.register(member);
