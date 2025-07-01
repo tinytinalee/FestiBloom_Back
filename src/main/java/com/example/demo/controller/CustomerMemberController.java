@@ -12,6 +12,11 @@ public class CustomerMemberController {
     @Autowired
     private CustomerMemberService service;
     
+    @GetMapping
+    public void test(){
+    	
+    }
+    
     @PostMapping("/hello")
     public void hello() {
     	
