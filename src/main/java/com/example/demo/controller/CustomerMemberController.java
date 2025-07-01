@@ -16,6 +16,8 @@ public class CustomerMemberController {
     public void test(){
     	int a=100;
     	System.out.println(a);
+    	System.out.println("test");
+
     }
     
     @PostMapping("/hello")
