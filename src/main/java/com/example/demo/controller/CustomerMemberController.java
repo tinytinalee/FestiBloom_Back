@@ -14,7 +14,8 @@ public class CustomerMemberController {
     
     @GetMapping
     public void test(){
-    	
+    	int a=100;
+    	System.out.println(a);
     }
     
     @PostMapping("/hello")
