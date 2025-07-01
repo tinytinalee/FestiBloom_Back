@@ -10,21 +10,8 @@ import com.example.demo.service.CustomerMemberService;
 public class CustomerMemberController {
 
     @Autowired
-    private CustomerMemberService service;
-    
-    @GetMapping
-    public void test(){
-    	int a=100;
-    	System.out.println(a);
-    	System.out.println("test");
-
-    }
-    
-    @PostMapping("/hello")
-    public void hello() {
-    	
-    }
-    
+    private CustomerMemberService service;    
+        
     @PostMapping("/join")
     public CustomerMember join(@RequestBody CustomerMember member) {
         return service.register(member);
