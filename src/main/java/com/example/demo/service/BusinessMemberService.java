@@ -1,17 +1,16 @@
 package com.example.demo.service;
 
+import com.example.demo.dao.BusinessMemberDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.example.demo.dao.BusinessMemberDAO;
-import com.example.demo.entity.BusinessMember;
 
 @Service
 public class BusinessMemberService {
 
     @Autowired
-    private BusinessMemberDAO dao;
+    private BusinessMemberDAO repository;
 
-    public BusinessMember register(BusinessMember member) {
-        return dao.save(member);
+    public boolean isIdAvailable(String bMemId) {
+        return !repository.existsByBmemId(bMemId);
     }
 }
