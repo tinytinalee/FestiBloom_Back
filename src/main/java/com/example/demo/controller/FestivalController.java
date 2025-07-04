@@ -18,7 +18,7 @@ public class FestivalController {
 	@Autowired
 	FestivalDAO dao;
 	
-	@GetMapping()
+	@GetMapping
 	public List<Festival> list(){
 		return dao.findAll();
 	}
