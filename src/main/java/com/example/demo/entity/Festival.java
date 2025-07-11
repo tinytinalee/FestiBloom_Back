@@ -13,17 +13,39 @@ public class Festival {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int festival_no;
+    @Column(name = "festival_no")
+    private int festivalNo;
 
-    private String festival_name;
-    private Date festival_start;
-    private Date festival_end;
-    private String festival_loc;
-    private String festival_place;
-    private String festival_genre;
-    private int festival_price;
-    private String festival_img;
-    private String festival_detail;
-    private String festival_link;
-    private String b_mem_id;
+    @Column(name = "festival_name")
+    private String festivalName;
+   
+    @Column(name = "festival_start")
+    private Date festivalStart;
+    
+    @Column(name = "festival_end")
+    private Date festivalEnd;
+    
+    @Column(name = "festival_loc")
+    private String festivalLoc;
+    
+    @Column(name = "festival_place")
+    private String festivalPlace;
+    
+    @Column(name = "festival_genre")
+    private String festivalGenre;
+    
+    @Column(name = "festival_price")
+    private int festivalPrice;
+    
+    @Column(name = "festival_img")
+    private String festivalImg;
+    
+    @Column(name = "festival_detail")
+    private String festivalDetail;
+    
+    @Column(name = "festival_link")
+    private String festivalLink;
+    
+    @Column(name = "b_mem_id")
+    private String bMemId;
 }

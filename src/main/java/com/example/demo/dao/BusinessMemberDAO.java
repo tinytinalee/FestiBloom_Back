@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Repository
 public interface BusinessMemberDAO extends JpaRepository<BusinessMember, String> {
-	
-	// No property 'bmemId' found for type 'BusinessMember'; Did you mean 'BMemId','bMemId'
+
     boolean existsBybMemId(String bMemId);
 }

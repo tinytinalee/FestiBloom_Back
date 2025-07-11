@@ -7,5 +7,6 @@ import com.example.demo.entity.BoothItems;
 
 public interface BoothItemsDAO extends JpaRepository<BoothItems, Integer> {
 
-    List<BoothItems> findByFestivalNo(int festival_no);
+    List<BoothItems> findByFestivalNo(int festivalNo);
+
 }

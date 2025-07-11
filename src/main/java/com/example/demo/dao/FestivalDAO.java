@@ -10,5 +10,6 @@ import com.example.demo.entity.Festival;
 @Repository
 public interface FestivalDAO extends JpaRepository<Festival, Integer> {
 
-//    Festival findByFestivalNo(int festival_no);
+    Festival findByFestivalNo(int festivalNo);
+
 }
