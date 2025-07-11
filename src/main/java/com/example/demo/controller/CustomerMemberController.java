@@ -8,17 +8,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/customer")
+@RequestMapping("/customer")
 public class CustomerMemberController {
 
-    @Autowired
-    private CustomerMemberService service;
-
-    @GetMapping("/check-id")
-    public Map<String, Boolean> checkDuplicateId(@RequestParam String cMemId) {
-        boolean available = service.isIdAvailable(cMemId);
-        Map<String, Boolean> result = new HashMap<>();
-        result.put("available", available);
-        return result;
-    }
+//    @Autowired
+//    private CustomerMemberService service;
+//
+//    @GetMapping("/check-id")
+//    public Map<String, Boolean> checkDuplicateId(@RequestParam String cMemId) {
+//        boolean available = service.isIdAvailable(cMemId);
+//        Map<String, Boolean> result = new HashMap<>();
+//        result.put("available", available);
+//        return result;
+//    }
 }

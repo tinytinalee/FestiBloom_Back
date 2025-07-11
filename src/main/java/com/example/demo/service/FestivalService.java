@@ -19,6 +19,7 @@ public class FestivalService {
     }
 
     public Festival getFestival(int festivalNo) {
-        return dao.findByFestivalNo(festivalNo);
+//        return dao.findByFestivalNo(festivalNo);
+    	return dao.findById(festivalNo).get();
     }
 }

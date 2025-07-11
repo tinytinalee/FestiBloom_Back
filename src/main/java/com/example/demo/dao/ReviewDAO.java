@@ -6,8 +6,9 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
+
 public interface ReviewDAO extends JpaRepository<Review, Long> {
+
 
     List<Review> findByFestivalNoOrderByReviewNoDesc(Long festivalNo);
 

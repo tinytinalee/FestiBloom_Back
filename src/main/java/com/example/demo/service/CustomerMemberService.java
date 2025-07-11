@@ -11,6 +11,6 @@ public class CustomerMemberService {
     private CustomerMemberDAO repository;
 
     public boolean isIdAvailable(String cMemId) {
-        return !repository.existsByCmemId(cMemId);
+        return !repository.existsBycMemId(cMemId);
     }
 }

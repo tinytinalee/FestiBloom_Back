@@ -4,7 +4,9 @@ import com.example.demo.entity.CustomerMember;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository
+
 public interface CustomerMemberDAO extends JpaRepository<CustomerMember, String> {
-    boolean existsByCmemId(String cMemId);
+	
+	//'CustomerMember'; Did you mean 'cMemId','CMemId'
+    boolean existsBycMemId(String cMemId);
 }

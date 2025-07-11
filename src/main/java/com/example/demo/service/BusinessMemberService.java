@@ -11,6 +11,7 @@ public class BusinessMemberService {
     private BusinessMemberDAO repository;
 
     public boolean isIdAvailable(String bMemId) {
-        return !repository.existsByBmemId(bMemId);
+//        return !repository.existsByBmemId(bMemId);
+    	return !repository.existsBybMemId(bMemId);
     }
 }

@@ -9,13 +9,18 @@ import com.example.demo.dao.BoothItemsDAO;
 import com.example.demo.entity.BoothItems;
 
 @RestController
-@RequestMapping("/api/booth-items")
+@RequestMapping("/booth-items")
 @CrossOrigin
 public class BoothItemsController {
 
     @Autowired
     private BoothItemsDAO dao;
-
+    
+    @GetMapping("/test")
+    public String test() {
+    	return "test";
+    }
+    
     //조회
     @GetMapping("/{festivalNo}")
     public List<BoothItems> getItemsByFestival(@PathVariable int festivalNo) {
