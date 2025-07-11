@@ -31,7 +31,7 @@ public class BoothItemsController {
     //수정
     @PutMapping("/{itemNo}")
     public BoothItems updateItem(@PathVariable int itemNo, @RequestBody BoothItems updatedItem) {
-        updatedItem.setItem_no(itemNo);
+        updatedItem.setItemNo(itemNo);
         return dao.save(updatedItem);
     }
 

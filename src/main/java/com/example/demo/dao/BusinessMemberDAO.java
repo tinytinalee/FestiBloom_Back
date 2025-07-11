@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface BusinessMemberDAO extends JpaRepository<BusinessMember, String> {
-    boolean existsByBmemId(String bMemId);
+    boolean existsBybMemId(String bMemId);
 }

@@ -13,11 +13,21 @@ public class BoothItems {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_item_no")
     @SequenceGenerator(name = "seq_item_no", sequenceName = "seq_item_no", allocationSize = 1)
-    private int item_no;
+    @Column(name = "item_no")
+    private int itemNo;
 
-    private String booth_name;
-    private String item_name;
-    private String item_info;
-    private int festival_no;
-    private int item_price;
+    @Column(name = "booth_name")
+    private String boothName;
+   
+    @Column(name = "item_name")
+    private String itemName;
+   
+    @Column(name = "item_info")
+    private String itemInfo;
+   
+    @Column(name = "festival_no")
+    private int festivalNo;
+   
+    @Column(name = "item_price")
+    private int itemPrice;
 }
