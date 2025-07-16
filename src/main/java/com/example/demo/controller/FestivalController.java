@@ -24,7 +24,6 @@ public class FestivalController {
         return service.getAllFestivals();
     }
 
-
     //단일 페스티벌 상세 조회 (날씨용 등)
     @GetMapping("/{festivalNo}")
     public Festival getFestival(@PathVariable int festivalNo) {
