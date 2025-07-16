@@ -2,9 +2,10 @@ package com.example.demo.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import java.time.LocalDate;
 
 @Entity
-@Table(name = "Cast")
+@Table(name = "LINE_UP")
 @Data
 public class Cast {
 
@@ -17,11 +18,8 @@ public class Cast {
     @Column(name = "cast_name")
     private String castName;
 
-    @Column(name = "cast_info")
-    private String castInfo;
-
-    @Column(name = "cast_time")
-    private String castTime;
+    @Column(name = "cast_date")
+    private LocalDate castDate; // DATE 타입에 맞게 LocalDate 사용
 
     @Column(name = "festival_no")
     private int festivalNo;

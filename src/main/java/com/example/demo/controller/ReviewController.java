@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/review")
+@CrossOrigin
 public class ReviewController {
 
     @Autowired
@@ -21,9 +22,10 @@ public class ReviewController {
     }
 
     //후기 목록
-    @GetMapping("/list")
-    public List<Review> getReviewList(@RequestParam("festivalNo") Long festivalNo) {
-        return reviewService.getReviewList(festivalNo);
+    @GetMapping("/list/{festivalNo}")    
+    public List<Review> getReviewList(@PathVariable("festivalNo") Long festivalNo) {
+    	System.out.println("list call");
+    	return reviewService.getReviewList(festivalNo);
     }
 
     //후기 상세 조회

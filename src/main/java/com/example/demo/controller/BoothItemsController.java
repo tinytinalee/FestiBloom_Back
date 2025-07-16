@@ -1,48 +1,22 @@
- package com.example.demo.controller;
+package com.example.demo.controller;
 
-import java.util.List;
-
+import com.example.demo.entity.BoothItems;
+import com.example.demo.service.BoothItemsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import com.example.demo.dao.BoothItemsDAO;
-import com.example.demo.entity.BoothItems;
+import java.util.List;
 
 @RestController
-@RequestMapping("/booth-items")
+@RequestMapping("/booth-items") // ✅ 이 경로 중요!
 @CrossOrigin
 public class BoothItemsController {
 
     @Autowired
-    private BoothItemsDAO dao;
-    
-    @GetMapping("/test")
-    public String test() {
-    	return "test";
-    }
-    
-    //조회
+    private BoothItemsService boothItemsService;
+
     @GetMapping("/{festivalNo}")
-    public List<BoothItems> getItemsByFestival(@PathVariable int festivalNo) {
-        return dao.findByFestivalNo(festivalNo);
-    }
-
-    //등록
-    @PostMapping
-    public BoothItems createItem(@RequestBody BoothItems item) {
-        return dao.save(item);
-    }
-
-    //수정
-    @PutMapping("/{itemNo}")
-    public BoothItems updateItem(@PathVariable int itemNo, @RequestBody BoothItems updatedItem) {
-        updatedItem.setItemNo(itemNo);
-        return dao.save(updatedItem);
-    }
-
-    //삭제
-    @DeleteMapping("/{itemNo}")
-    public void deleteItem(@PathVariable int itemNo) {
-        dao.deleteById(itemNo);
+    public List<BoothItems> findByFestival(@PathVariable int festivalNo) {
+        return boothItemsService.findByFestival(festivalNo);
     }
 }
