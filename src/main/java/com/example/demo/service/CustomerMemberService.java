@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.dao.CustomerMemberDAO;
+import com.example.demo.entity.CustomerMember;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,9 +9,13 @@ import org.springframework.stereotype.Service;
 public class CustomerMemberService {
 
     @Autowired
-    private CustomerMemberDAO repository;
+    private CustomerMemberDAO customerMemberDAO;
 
-    public boolean isIdAvailable(String cMemId) {
-        return !repository.existsBycMemId(cMemId);
+    public boolean isIdDuplicate(String cMemId) {
+        return customerMemberDAO.existsById(cMemId);
+    }
+
+    public void join(CustomerMember customer) {
+        customerMemberDAO.save(customer);
     }
 }
