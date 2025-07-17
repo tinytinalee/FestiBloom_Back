@@ -17,7 +17,7 @@ public class FestivalService {
     public List<Festival> getAllFestivals() {
         return dao.findAll();
     }
-
+    
     public Festival getFestival(int festivalNo) {
 //        return dao.findByFestivalNo(festivalNo);
     	return dao.findById(festivalNo).get();
