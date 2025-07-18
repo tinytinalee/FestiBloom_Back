@@ -23,4 +23,5 @@ public class Cast {
 
     @Column(name = "festival_no")
     private int festivalNo;
+
 }

@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface BoothItemsDAO extends JpaRepository<BoothItems, Integer> {
     List<BoothItems> findByFestivalNo(int festivalNo);
+
 }
+

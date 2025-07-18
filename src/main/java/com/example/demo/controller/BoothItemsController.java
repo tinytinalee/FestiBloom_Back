@@ -19,4 +19,5 @@ public class BoothItemsController {
     public List<BoothItems> findByFestival(@PathVariable int festivalNo) {
         return boothItemsService.findByFestival(festivalNo);
     }
+
 }

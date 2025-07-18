@@ -16,4 +16,6 @@ public class BoothItemsService {
     public List<BoothItems> findByFestival(int festivalNo) {
         return boothItemsDAO.findByFestivalNo(festivalNo);
     }
+
 }
+

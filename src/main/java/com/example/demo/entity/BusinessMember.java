@@ -36,4 +36,5 @@ public class BusinessMember {
     @Column(name = "b_mem_email")
     @JsonProperty("bMemEmail")
     private String bMemEmail;
+
 }

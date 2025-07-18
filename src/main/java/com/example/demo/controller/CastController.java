@@ -45,4 +45,6 @@ public class CastController {
     public void delete(@PathVariable int castNo) {
         dao.deleteById(castNo);
     }
+
 }
+

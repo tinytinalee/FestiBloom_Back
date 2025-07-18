@@ -22,4 +22,6 @@ public class CustomerMemberController {
     public void join(@RequestBody CustomerMember customer) {
         customerMemberService.join(customer);
     }
+
 }
+

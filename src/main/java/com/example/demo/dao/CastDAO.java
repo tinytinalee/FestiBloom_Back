@@ -6,4 +6,5 @@ import com.example.demo.entity.Cast;
 
 public interface CastDAO extends JpaRepository<Cast, Integer> {
     List<Cast> findByFestivalNo(int festivalNo);
+
 }

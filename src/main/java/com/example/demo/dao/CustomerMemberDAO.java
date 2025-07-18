@@ -3,6 +3,7 @@ package com.example.demo.dao;
 import com.example.demo.entity.CustomerMember;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
@@ -19,5 +20,7 @@ public interface CustomerMemberDAO extends JpaRepository<CustomerMember, String>
     
     @Query("SELECT cm.cMemName FROM CustomerMember cm WHERE cm.cMemId = :id")
     String findNameById(@Param("id") String cMemId);
+
+    // existsById 자동 제공됨
 
 }
